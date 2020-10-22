@@ -24,4 +24,11 @@ export default {
     await tasksRepository.save(task);
     return res.status(201).json(task);
   },
+  async delete(req: Request, res: Response) {
+    const { id } = req.params;
+    const tasksRepository = getRepository(Task);
+    tasksRepository.delete(id);
+    return res.status(204).json({ message: "Resource deleted successfully" });
+  },
+  async edit(req: Request, res: Response) {},
 };
