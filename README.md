@@ -2,9 +2,10 @@
 
 ## Preparação de Ambiente
 
-As seguintes ferramentas precisam estar instaladas em sua máquina para um corretor funcionamento do servidor.
+As seguintes ferramentas precisam estar instaladas em sua máquina para um correto funcionamento do servidor.
 
 - [Yarn](https://classic.yarnpkg.com/pt-BR/docs/install/#mac-stable)
+- [NodeJS](https://nodejs.org/en/download/)
 
 ## Passo a passo
 
@@ -20,13 +21,13 @@ Entre no repositório
 $ cd tech_todo_list_backend
 ```
 
-E execute o comando para iniciar a aplicação com um banco de dados limpo
+Execute o comando para iniciar a aplicação com um banco de dados limpo
 
 ```
 $ make create
 ```
 
-Se tudo ocorrer como o esperado, o servidor estará disponível em **http://localhost:/3333**
+- Se tudo ocorrer como o esperado, o servidor estará disponível em **http://localhost:/3333**
 
 ---
 
