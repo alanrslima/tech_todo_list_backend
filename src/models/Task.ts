@@ -8,7 +8,7 @@ export default class Task {
   @Column()
   name: string;
 
-  @Column()
+  @Column({ nullable: true })
   description: string;
 
   @Column()

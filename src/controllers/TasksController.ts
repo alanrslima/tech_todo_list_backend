@@ -16,9 +16,8 @@ export default {
     const data = { name, description, favorite: false, concluded: false };
     const schema = Yup.object().shape({
       name: Yup.string().required().max(300),
-      description: Yup.string().required(),
+      description: Yup.string(),
     });
-
     await schema.validate(data, { abortEarly: false });
     const task = tasksRepository.create(data);
     await tasksRepository.save(task);
