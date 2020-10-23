@@ -30,5 +30,13 @@ export default {
     tasksRepository.delete(id);
     return res.status(204).json({ message: "Resource deleted successfully" });
   },
-  async edit(req: Request, res: Response) {},
+  async edit(req: Request, res: Response) {
+    const { id } = req.params;
+    const { name, description, favorite, concluded } = req.body;
+    const tasksRepository = getRepository(Task);
+    tasksRepository.update(id, { name, description, favorite, concluded });
+    // const updatedContact = await crmRepository.findOne(req.params.contactId);
+    //
+    return res.status(204).json({ message: "Resource edit successfully" });
+  },
 };
